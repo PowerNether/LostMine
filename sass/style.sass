@@ -1,0 +1,1331 @@
+@import ./../css/fonts.css
+
+*, html, body
+    font-family: 'e-Ukraine';
+
+// main
+.main
+    background: url('./../images/background.jpg') center / cover no-repeat
+// /main
+// header
+.header
+    padding: 45px 0 90px
+    display: flex
+    align-items: center
+    &-logo
+        margin-right: 70px
+    &-title
+        font-size: 44px
+        line-height: 1.2
+        font-weight: bold
+        color: #fff
+        text-transform: uppercase
+        margin: 0 0 15px
+        padding: 0
+    &-subtitle
+        font-size: 13.5px
+        line-height: 1.2
+        font-weight: normal
+        color: #fff
+        text-transform: uppercase
+        margin: 0
+        padding: 0
+    &-menu
+        display: block
+        width: 100%
+    &-list
+        display: flex
+        align-items: center
+        justify-content: space-between
+        list-style: none
+        margin: 0
+        padding: 0
+    &-item
+        margin: 0
+        padding: 0
+    &-link
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: normal;
+        color: #fff
+        text-decoration: none
+        position: relative
+        margin: 0
+        padding: 0
+        transition: color .35s
+        &:hover
+            color: #cacaca
+    &-link__active
+        &::after
+            content: ''
+            display: block
+            width: 50%
+            height: 2px
+            background: #fff
+            position: absolute
+            top: calc(100% + 7px)
+            left: 50%
+            transform: translateX(-50%)
+// /header
+// mainpage
+.mainpage
+    .container-xl
+        max-width: 1120px
+    &-alert
+        margin-bottom: 20px
+        padding: 30px
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__item
+            display: flex
+            align-items: center
+        &__icon
+            display: block
+            width: 44px
+            height: 44px
+            margin-right: 15px
+            &-clock
+                background: url('./../images/clock.png') center / contain no-repeat
+            &-notebook
+                width: 55px
+                background: url('./../images/notebook.png') center / contain no-repeat
+            &-pin
+                background: url('./../images/pin.png') center / contain no-repeat
+        &__text
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #000000;
+            max-width: 190px
+            margin: 0
+            padding: 0
+    &-buttons
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 0 -7.5px
+        margin-bottom: 20px
+        &__link
+            font-size: 13.8px;
+            line-height: 48px;
+            font-weight: 400;
+            color: #000000;
+            text-decoration: none
+            text-align: center
+            width: 100%
+            margin: 0 7.5px
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 10px
+            &:hover
+                cololr: #4d4d4d;
+    &-products
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        margin: 0 -16px -5px
+        &__item
+            width: calc( 100% / 5 - 32px )
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            padding: 10px 5px
+            margin: 0 16px 25px
+        &__title
+            position: relative
+            font-size: 16.3px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: #000000;
+            text-transform: uppercase
+            margin: 0
+            padding: 10px 10px 0
+            &::after
+                position: absolute
+                top: calc(100% + 10px)
+                left: 10px
+                content: attr(data-text)
+                font-size: 10px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #ff3600;
+        &__image
+            display: block
+            width: 125px
+            height: 125px
+            object-fit: contain
+            object-position: center
+            margin: 35px auto
+        &__btn
+            font-size: 10px;
+            line-height: 27px;
+            font-weight: 300;
+            color: #ffffff;
+            border: none
+            border-radius: 10px
+            background-color: #9d9d9d;
+            width: 100%
+            transition: background-color .35s
+            &:hover
+                background-color: #ff3600;
+    &-last
+        padding: 15px 30px
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__item
+            position: relative
+            cursor: pointer
+            &:hover .mainpage-last__info
+                opacity: 1
+        &__image
+            width: 65px
+            height: 65px
+            object-fit: contain
+            object-position: center
+        &__info
+            padding: 10px 15px
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            position: absolute
+            top: calc(100% + 25px)
+            left: 50%
+            transform: translateX(-50%)
+            opacity: 0
+            transition: opacity .35s
+        &__text
+            white-space: nowrap
+            margin: 0
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #000000;
+            &-mb
+                margin-bottom: 15px
+// /mainpage
+// rulespage
+.rulespage
+    .container-xl
+        max-width: 1120px
+    .nav-tabs
+        display: flex
+        align-items: center
+        flex-wrap: nowrap
+        width: 100%
+        border: none
+        margin: 0 0 25px
+    .nav-item
+        width: 100%
+        margin: 0 10px 0 0
+        &:last-of-type
+            margin-right: 0
+    .nav-link
+        padding: 0
+        width: 100%
+        border: none
+        outline: none
+        font-size: 13.2px;
+        line-height: 50px;
+        font-weight: 400;
+        color: #000000;
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        &:hover
+            color: #595959;
+    .nav-link.active
+        background-color: rgba(255,255,255,0.7);
+        color: #ff2a00;
+    .tab-content
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        padding: 25px
+        height: 700px
+        margin: 0 0 25px
+    .tab-pane
+        overflow-y: scroll
+        height: 100%
+        &::-webkit-scrollbar 
+            width: 5px;
+        &::-webkit-scrollbar-track
+            background: none
+        &::-webkit-scrollbar-thumb
+            background-color: rgba(0,0,0,0.2);
+            transition: background-color .35s
+            border-radius: 10px
+        &::-webkit-scrollbar-thumb:hover
+            background-color: rgba(0,0,0,0.4);
+    &-text
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #000000;
+        margin: 0 0 30px
+    &-link
+        display: block
+        border-radius: 10px
+        background-color: rgba(255,255,255,0.7);
+        margin: 0 0 25px
+        font-size: 16px;
+        line-height: 50px;
+        font-weight: 400;
+        color: #000000;
+        text-decoration: none
+        text-align: center
+        &:hover
+            color: #4b4b4b;
+    &-alert
+        border-radius: 10px
+        background-color: rgba(255,255,255,0.7);
+        padding: 40px
+        margin: 0
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #000000;
+        text-align: center
+// /rulespage
+// downloadpage
+.downloadpage
+    .container-xl
+        max-width: 1120px
+    &-info
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+    &-launcher
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        margin-right: 30px
+        width: 100%
+        max-width: 325px
+        min-height: 325px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        margin-bottom: 20px
+    &-logo
+        width: 225px
+        height: 225px
+        object-fit: contain
+        object-position: center
+    &-title
+        position: absolute
+        bottom: 25px
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 13.7px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #000000;
+        margin: 0
+    &-desc
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 25px
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        margin-bottom: 20px
+    &-text
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #000000;
+        margin: 0
+        &__mb
+            margin-bottom: 15px
+    &-buttons
+        margin: 0 -10px
+        display: flex
+        align-items: center
+    &-link
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        font-size: 14px;
+        line-height: 45px;
+        font-weight: 400;
+        text-decoration: none
+        text-align: center
+        color: #000;
+        display: block
+        width: 100%
+        margin: 0 10px
+        &:hover
+            color: #686868;
+        &:first-of-type
+            background-color: rgba(255,42,0,0.7);
+            color: #ffffff;
+        &:first-of-type:hover
+            color: #d5d5d5;
+// /downloadpage
+// not auth console
+.notconsole
+    &-title
+        max-width: 725px
+        margin: 0 auto 70px
+        font-size: 27px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #ffffff;
+        text-align: center
+    &-btn
+        display: block
+        border: none
+        border-radius: 10px
+        font-size: 16px;
+        line-height: 50px;
+        font-weight: 300;
+        color: #000000;
+        text-align: center
+        max-width: 410px
+        width: 100%
+        margin: 0 auto 25px
+    &-text
+        max-width: 725px
+        margin: 0 auto 70px
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center
+// /not auth console
+// consolepage
+.consolepage
+    .container-xl
+        max-width: 1120px
+    &-form
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &-input
+        width: 100%
+        position: relative
+        margin-right: 20px
+        &::before
+            content: '/'
+            position: absolute
+            top: 50%
+            left: 10px
+            transform: translateY(-50%)
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #000000;
+        input
+            border: none
+            width: 100%
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            line-height: 50px
+            padding: 0 20px
+            &::placeholder
+                font-size: 12px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #00000080;
+            &:focus
+                outline: none
+    &-servers
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        width: 100%
+        max-width: 375px
+        margin-right: 20px
+        display: flex
+        align-items: center
+        justify-content: space-around
+        label
+            line-height: 50px
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+    &-server
+        padding: 0
+        display: flex
+        align-items: center
+    &-switch
+        input.form-check-input
+            margin-left: 10px
+    &-btn
+        border: none
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        line-height: 50px
+        width: fit-content
+        font-size: 12px;
+        font-weight: 300;
+        color: #000000;
+        white-space: nowrap
+        padding: 0 20px
+        &:focus
+            outline: none
+    &-info
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+    &-commands
+        max-height: 720px
+        width: 100%
+        max-width: 540px
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        padding: 25px 20px
+        margin-left: 60px
+    &-title
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #000000;
+        margin: 0 0 35px
+    &-list
+        height: 100%
+        max-height: 600px
+        overflow-y: scroll
+        &::-webkit-scrollbar 
+            width: 5px;
+        &::-webkit-scrollbar-track
+            background: none
+        &::-webkit-scrollbar-thumb
+            background-color: rgba(0,0,0,0.2);
+            transition: background-color .35s
+            border-radius: 10px
+        &::-webkit-scrollbar-thumb:hover
+            background-color: rgba(0,0,0,0.4);
+    &-item
+        display: flex
+        align-items: flex-start
+        margin-bottom: 25px
+        padding-right: 20px
+    &-text
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #000000;
+        max-width: 300px
+    &-use
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #00000080;
+    &-history
+        width: 100%
+        max-width: 500px
+        .slick-prev
+            left: -40px
+        .slick-prev::before
+            content: ''
+            background: url('./../images/next.png') center / contain no-repeat;
+            transform: rotate(180deg)
+            width: 20px
+            height: 20px
+            display: block
+            font-size: 25px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #ffffff;
+        .slick-next
+            right: -40px
+        .slick-next::before
+            content: ''
+            background: url('./../images/next.png') center / contain no-repeat;
+            width: 20px
+            height: 20px
+            display: block
+            font-size: 25px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #ffffff;
+    .history
+        &-item
+            margin: 0
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            padding: 25px 20px
+            margin-bottom: 20px
+            height: 225px
+            &__mb
+                margin-bottom: 0
+        &-title
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #000000;
+            margin: 0 0 5px
+        &-command
+            margin: 0 0 25px
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #000000;
+            span
+                margin-left: 5px
+                line-height: 18px
+                padding: 0 10px
+                display: inline-block
+                background-color: #ffffff;
+                border-radius: 10px
+        &-response
+            margin: 0
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #000000;
+            overflow-y: scroll
+            height: 100%
+            max-height: 100px
+            &::-webkit-scrollbar 
+                width: 5px;
+            &::-webkit-scrollbar-track
+                background: none
+            &::-webkit-scrollbar-thumb
+                background-color: rgba(0,0,0,0.2);
+                transition: background-color .35s
+                border-radius: 10px
+            &::-webkit-scrollbar-thumb:hover
+                background-color: rgba(0,0,0,0.4);
+            &__mb
+                margin-bottom: 15px
+                overflow-y: auto
+                height: auto
+// /consolepage
+// banspage
+.banspage
+    .container-xl
+        max-width: 1120px
+    .nav-tabs
+        display: flex
+        align-items: center
+        flex-wrap: nowrap
+        width: 100%
+        border: none
+        margin: 0 0 25px
+    .nav-item
+        width: 100%
+        margin: 0 10px 0 0
+        &:last-of-type
+            margin-right: 0
+    .nav-link
+        padding: 0
+        width: 100%
+        border: none
+        outline: none
+        font-size: 13.2px;
+        line-height: 50px;
+        font-weight: 400;
+        color: #000000;
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        &:hover
+            color: #595959;
+    .nav-link.active
+        background-color: rgba(255,255,255,0.7);
+        color: #ff2a00;
+    &-search
+        display: flex
+        align-items: center
+        margin-bottom: 25px
+    &-input
+        width: 100%
+        margin-right: 25px
+        position: relative
+        &::before
+            content: ''
+            background: url('./../images/seacrh.png') center / contain no-repeat
+            width: 18px
+            height: 18px
+            position: absolute
+            top: 50%
+            left: 15px
+            transform: translateY(-50%)
+        input
+            width: 100%
+            border: none
+            line-height: 65px
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            font-size: 16px;
+            font-weight: 400;
+            color: #000000;
+            padding: 0 40px
+            &::placeholder
+                color: #00000080;
+            &:focus
+                outline: none
+    &-btn
+        border: none
+        line-height: 65px
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        font-size: 16px;
+        font-weight: 400;
+        color: #000000;
+        padding: 0 15px
+        white-space: nowrap
+        &:focus
+            outline: none
+    .thead
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+        margin-bottom: 30px
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        padding: 30px
+        p
+            margin: 0
+            width: 100%
+            text-align: center
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #000000;
+    .tbody
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+        margin-bottom: 30px
+        padding: 70px 30px
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        position: relative
+        span
+            display: none
+        p
+            margin: 0
+            width: 100%
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #000000;
+        img
+            width: 60px
+            height: 60px
+            object-fit: cover
+            object-position: center
+        button
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 55px
+            background-color: #ff3600;
+            padding: 0 35px
+            display: block
+            position: absolute
+            bottom: 25px
+            right: -20px
+            border-radius: 10px
+            border: 0
+    .tbody-1
+        max-width: 165px
+    .tbody-2
+        max-width: 165px
+    .tbody-3
+        max-width: 295px
+    .tbody-4
+        max-width: 95px
+    .tbody-5
+        max-width: 95px
+    .tbody-6
+        max-width: 160px
+    &-pages
+        display: flex
+        align-items: center
+        width: 100%
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+    &-item
+        display: block
+        width: 100%
+        font-size: 16px;
+        line-height: 60px;
+        width: 60px
+        text-align: center
+        font-weight: 400;
+        color: #000;
+        text-decoration: none
+        cursor: pointer
+        &:hover
+            color: #ff1e0080;
+        &__active
+            color: #ff1e00;
+// /banspage
+// panelpage
+.rights
+    &-new
+        display: flex
+        align-items: flex-start
+        button
+            flex-shrink: 0
+            border: 0
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            line-height: 50px
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 20px
+            display: block
+            white-space: nowrap
+            display: block
+            width: 245px;
+            &:focus
+                outline: none
+        .rights-servers
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            margin-bottom: 20px
+            display: flex
+            align-items: center
+            padding: 0 15px
+            &:last-of-type
+                margin-bottom: 70px
+                justify-content: space-between
+        .rights-server
+            padding: 0
+            display: flex
+            align-items: center
+            label
+                font-size: 12px;
+                line-height: 50px;
+                font-weight: 300;
+                color: #000000;
+        .form-check-input
+            font-size: 20px
+            margin: 0
+            margin-left: 5px
+            margin-right: 15px
+        .rights-users
+            padding-left: 70px
+            font-size: 16.8px;
+            font-weight: 300;
+            color: #ffffff;
+    &-input
+        width: 100%
+        margin-right: 20px
+        input
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            width: 100%
+            border: 0
+            line-height: 50px
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 13px
+.rights
+    &-user
+        display: flex
+        align-items: flex-start
+        p
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            width: 100%
+            border: 0
+            line-height: 50px
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 13px
+        button
+            flex-shrink: 0
+            border: 0
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            line-height: 50px
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 20px
+            display: block
+            white-space: nowrap
+            display: block
+            width: 245px;
+            &:focus
+                outline: none
+        .rights-servers
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            margin-bottom: 20px
+            display: flex
+            align-items: center
+            padding: 0 15px
+        .rights-server
+            padding: 0
+            display: flex
+            align-items: center
+            label
+                font-size: 12px;
+                line-height: 50px;
+                font-weight: 300;
+                color: #000000;
+        .form-check-input
+            font-size: 20px
+            margin: 0
+            margin-left: 5px
+            margin-right: 15px
+        .rights-users
+            padding-left: 70px
+            font-size: 16.8px;
+            font-weight: 300;
+            color: #ffffff;
+.promocods
+    &-input
+        width: 100%
+        margin-right: 20px
+        input
+            width: 100%
+            border: 0
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            line-height: 50px
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 13px
+    &-servers
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 10px
+    &-server
+        display: flex
+        align-items: center
+        padding: 0
+        &:last-of-type
+            margin-left: 20px
+    &-switch
+        margin-left: 5px
+        input.form-check-input
+            font-size: 20px
+            margin: 0
+    &-new
+        display: flex
+        align-items: flex-start
+        margin-bottom: 70px
+        button
+            flex-shrink: 0
+            border: 0
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            line-height: 50px
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 20px
+            display: block
+            white-space: nowrap
+            display: block
+            width: 245px;
+            &:focus
+                outline: none
+    &-list
+    &-item
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        p
+            width: 100%;
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            line-height: 50px
+            margin: 0 20px 0 0
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 13px
+        button
+            background-color: rgba(255,255,255,0.7);
+            white-space: nowrap
+            line-height: 50px
+            border: none
+            padding: 0 40px
+            border-radius: 10px
+            font-size: 13.6px;
+            font-weight: 400;
+            color: #000000;
+            flex-shrink: 0
+            width: 245px;
+            &:focus
+                outline: none
+.panelpage
+    .container-xl
+        max-width: 1305px
+    .nav-tabs
+        display: flex
+        align-items: center
+        flex-wrap: nowrap
+        width: 100%
+        border: none
+        margin: 0 0 25px
+    .nav-item
+        width: 100%
+        margin: 0 10px 0 0
+        &:last-of-type
+            margin-right: 0
+    .nav-link
+        padding: 0
+        width: 100%
+        border: none
+        outline: none
+        font-size: 13.2px;
+        line-height: 50px;
+        font-weight: 400;
+        color: #000000;
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        &:hover
+            color: #595959;
+    .nav-link.active
+        background-color: rgba(255,255,255,0.7);
+        color: #ff2a00;
+#alert
+    display: flex
+    align-items: center
+.settigns
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &-left
+        display: flex
+        align-items: flex-start
+    &-right
+        display: flex
+        align-items: flex-start
+        margin-bottom: 30px
+.left
+    &-commands
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 245px;
+        height: 50px;
+        border-radius: 10px
+        background-color: rgba(255,255,255,0.7);
+        margin-right: 20px
+        padding: 0 15px
+        font-size: 12.4px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #000000;
+        input
+            font-size: 18px
+    &-message
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 245px;
+        height: 50px;
+        border-radius: 10px
+        background-color: rgba(255,255,255,0.7);
+        padding: 0 15px
+        font-size: 12.4px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #000000;
+        input
+            font-size: 18px
+.right
+    &-input
+        input
+            background-color: rgba(255,255,255,0.7);
+            border: none
+            border-radius: 10px
+            width: 245px
+            line-height: 50px
+            font-size: 12.4px;
+            font-weight: 300;
+            color: #000000;
+            padding: 0 10px
+            margin-bottom: 15px
+            &:focus
+                outline: none
+    &-btn
+        background-color: rgba(255,255,255,0.7);
+        border: none
+        line-height: 50px
+        padding: 0 60px
+        font-size: 12.4px;
+        font-weight: 300;
+        color: #000000;
+        border-radius: 10px
+        margin-left: 20px
+        &:focus
+            outline: none
+    &-servers
+        display: flex
+        align-items: center
+        justify-content: space-between
+        label
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #000000;
+    &-switch .form-check-input
+        margin: 0 0 0 5px
+        font-size: 20px
+    &-server
+        padding: 0
+        display: flex
+        align-items: center
+.console
+    border-radius: 10px
+    height: 435px;
+    background-color: rgba(255,255,255,0.7);
+    overflow-y: scroll
+    padding: 35px 20px
+    &::-webkit-scrollbar 
+        width: 5px;
+    &::-webkit-scrollbar-track
+        background: none
+    &::-webkit-scrollbar-thumb
+        background-color: rgba(0,0,0,0.2);
+        transition: background-color .35s
+        border-radius: 10px
+    &::-webkit-scrollbar-thumb:hover
+        background-color: rgba(0,0,0,0.4);
+    p
+        padding-right: 20px
+        font-size: 12.3px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #000000;
+        margin-bottom: 15px
+.alert
+    &-input
+        width: 100%
+        input
+            width: 100%
+            border: 0
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px
+            line-height: 42px
+            width: 100%
+            padding: 0 20px
+            font-size: 12px;    
+            font-weight: 300;
+            color: #000000;
+            &:focus
+                outline: none
+    &-btn
+        border: 0
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 10px
+        line-height: 42px
+        font-size: 12px;
+        font-weight: 300;
+        color: #000000;
+        padding: 0 20px
+        display: block
+        white-space: nowrap
+        margin-left: 15px
+        &:focus
+            outline: none
+#console
+    .settigns-right
+        margin-bottom: 50px
+.stats
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px
+    margin-top: 50px
+    padding: 30px
+    &-list
+        display: flex
+        align-items: flex-start
+        margin: 0 -25px
+    &-item
+        width: calc( 100% / 5 - 50px )
+        margin: 0 25px
+        font-size: 14.6px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #000000;
+// /panelpage
+// footer
+.footer
+    margin-top: 175px
+    padding: 55px 0 65px
+    background: #000
+    .container-xl
+        max-width: 1160px
+    &-content
+        display: flex
+        align-items: center
+    &-logo
+        margin-right: 70px
+    &-title
+        font-size: 44px
+        line-height: 1.2
+        font-weight: bold
+        color: #fff
+        text-transform: uppercase
+        margin: 0 0 15px
+        padding: 0
+    &-subtitle
+        font-size: 13.5px
+        line-height: 1.2
+        font-weight: normal
+        color: #fff
+        text-transform: uppercase
+        margin: 0
+        padding: 0
+    &-menu
+        display: block
+        width: 100%
+    &-list
+        display: flex
+        align-items: center
+        justify-content: space-between
+        list-style: none
+        margin: 0
+        padding: 0
+    &-item
+        margin: 0
+        padding: 0
+    &-link
+        font-size: 20px
+        line-height: 1.2;
+        font-weight: normal
+        color: #fff
+        text-decoration: none
+        position: relative
+        margin: 0
+        padding: 0
+        transition: color .35s
+        &:hover
+            color: #cacaca
+    &-copyright
+        margin-top: 185px
+    &-text
+        font-size: 13px
+        line-height: 1.2
+        font-weight: 400
+        color: #ffffff
+        text-align: center
+        margin: 0
+        padding: 0
+// /footer
+// modals
+#buyModal
+    background: rgba(0, 0, 0, .8)
+    .modal-content
+        border: none
+    .modal-body
+        padding: 25px 25px 100px
+.buyModal
+    &-title
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #000000;
+        text-align: center
+        margin: 0 0 55px
+    &-name
+        font-size: 24.8px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #000000;
+        text-align: center
+        margin: 0 0 35px
+    &-input
+        width: calc(100% - 50px)
+        background-color: rgba(0,0,0,0.05);
+        border-radius: 10px
+        border: none
+        padding: 0 15px
+        margin: 0 25px 25px
+        line-height: 40px
+        font-size: 12px;
+        font-weight: 300;
+        color: #212121;
+        &:focus
+            outline: none
+        &::placeholder
+            font-size: 12px;
+            color: #9e9e9e;
+    &-servers
+        padding: 0 75px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 25px
+    &-server
+        padding: 0
+        label
+            font-size: 12.9px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #9e9e9e;
+            text-align: center
+            display: block
+            margin-bottom: 10px
+    &-switch
+        display: flex
+        align-items: center
+        justify-content: center
+        input.form-check-input
+            margin: 0
+        input:focus
+            box-shadow: none
+    &-desc
+        max-width: 290px
+        margin: 0 auto 25px
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #9e9e9e;
+        text-align: center
+    &-btn
+        display: block
+        background-color: #ff3600;
+        border-radius: 10px
+        border: 0px
+        max-width: 370px
+        width: 100%
+        margin: 0 auto 10px
+        font-size: 12px;
+        line-height: 40px
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center
+    &-promo
+        margin-bottom: 40px
+    &-link
+        display: block
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #9e9e9e;
+        text-decoration: none
+        text-align: center
+        transition: color .35s
+        &:hover
+            color: #707070;
+    &-promoInput
+        display: none
+        width: calc(100% - 50px)
+        background-color: rgba(0,0,0,0.05);
+        border-radius: 10px
+        border: none
+        padding: 0 15px
+        margin: 0 25px 25px
+        line-height: 40px
+        font-size: 12px;
+        font-weight: 300;
+        color: #212121;
+        &:focus
+            outline: none
+        &::placeholder
+            font-size: 12px;
+            color: #9e9e9e;
+    &-text
+        font-size: 11.8px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #9e9e9e;
+        margin: 0
+        &__mb
+            margin-bottom: 15px
